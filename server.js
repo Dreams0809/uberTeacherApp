@@ -39,12 +39,14 @@ app.get('/CreateProfile', async (request, response)=> {
 })
 
 app.post('/addInfo', async (request, response)=>{
-    db.collection('CreateProfile').insertOne({thing:request.body.FName })
-    db.collection('CreateProfile').insertOne({thing:request.body.LName })
-    db.collection('CreateProfile').insertOne({thing:request.body.email })
-    db.collection('CreateProfile').insertOne({thing:request.body.age })
-    db.collection('CreateProfile').insertOne({thing:request.body.College })
-    db.collection('CreateProfile').insertOne({thing:request.body.Education })
+    db.collection('CreateProfile').insertOne({
+        firstName:request.body.FName, 
+        Lastname:request.body.LName,
+        Age: request.body.age,
+        College_University: request.body.College,
+        Education:request.body.Education,
+        Race_Ethnicity: request.body.race,
+        briefDescription: request.body.description })
     .then(result => {
         console.log('Added all the info')
         response.redirect('/createProfile')    
