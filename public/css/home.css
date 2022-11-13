@@ -1,0 +1,102 @@
+﻿/* Box Model Hack */
+*{
+    box-sizing: border-box;
+}
+  
+  /* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+  
+.clear {
+    clear: both;
+}
+  
+/******************************************
+/* BASE STYLES
+/*******************************************/
+  
+
+  
+  
+/******************************************
+/* LAYOUT
+/*******************************************/
+  
+  
+/******************************************
+/* ADDITIONAL STYLES
+ /*******************************************/
+
+/* Header */
+:root{
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-white: #141d28;
+    --color-black-1: #212b38;
+}
+
+
+
+div{
+    background-color: hwb(0 94% 0%);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.logo{
+    color: var(--color-white);
+    font-size:30px;
+}
+
+.logo span{
+    color: var(--color-primary);
+}
+
+.menu_bar ul{
+    list-style:none;
+    display: flex;
+    
+}
+
+.menu_bar ul li{
+    padding: 10px 30 px;
+    justify-content: space-between;
+}
+
+.menu_bar ul li a{
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    transition: all 0.3s;
+}
+
+.menu_bar ul li a :hover{
+    color: var(--color-primary);
+
+}
+
+/* Body */
+
+.Title{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
