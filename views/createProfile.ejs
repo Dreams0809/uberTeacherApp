@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="public/css/createprofile.css" type="text/css">
+    <title>Create a Profile</title>
 </head>
 <body>
-    <h1> Create Profile</h1>
+    <!-- Header -->
+    <div class="menu_bar">
+        <h1 class="logo">Create<span>Account</span></h1>
 
-    <h1>Bio</h1>
+        <ul> 
+            <li> <a href="/"> Home</a></li>
+
+        </ul>
+
+
+
+
+    </div>
+    
+   
+        
+        
+   
+    
+
+    <h2> Make an impact today !
+        <!-- <p id="why"> When you create a profile, that is the first step in becoming an Uber Professor. When you create a profile
+        you make it easier for school officials to find a quick and easy substitue. When writing the description make sure to be 
+        detailed as possible because we want the people viewing the profile to as much about you. </p> -->
+    </h2>
 
     <form action="/addInfo" method="POST">
     
             
-        
-            <!-- <h2> Firstname:</h2>
-            <input type="text" placeholder="" name="FName"> -->
-            <label for="fname">First name:</label>
+            <label> Resume </label>
+            <input name="resume" type="file"><br><br>
+
+
+
+            <label>First name:</label>
             <input type="text" id="fname" name="fname"><br><br>      
           
 
@@ -26,17 +51,15 @@
                     
                
             
-            <label for="email">Email:</label>
+            <label>Email:</label>
             <input type="text" placeholder="" name="email"><br><br>
                 
            
-            <label for="state">State:</label>
-            <!-- <input type="text" placeholder="" name="state"><br><br> -->
-            <!-- <form action="/search" method="POST"> -->
-
-                <select>
-                <option value="">Alabama</option>
-                <option value="">Alaska</option>
+            <label>State:</label>
+            <select name="states"> 
+                <option> --Select a State--</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
                 <option value="">Arizona</option>
                 <option value="">Arkansas</option>
                 <option value="">California</option>
@@ -60,10 +83,6 @@
                 <option value="">Minnesota</option>
                 <option value="">Mississippi</option>
                 <option value="">Missouri</option>
-                <option value="">Alabama</option>
-                <option value="">Alabama</option>
-                <option value="">Alabama</option>
-                <option value="">Alabama</option>
                 <option>Montana</option>
                 <option>Nebraska</option>	
                 <option>Nevada</option>	
@@ -89,49 +108,46 @@
                 <option>West Virginia</option>	
                 <option>Wisconsin</option>	
                 <option>Wyoming</option>
-                </select> <br><br>
-            <!-- </form> -->
+            </select><br><br>
+
+
 
             
-            <label for="age">Age:</label>
+            <label>Age:</label>
             <input type="text" placeholder="" name="age"><br><br>
             
            
 
-            <label for="race">Race/Ethnicity:</label>
-            
-            <!-- <input type="text" placeholder="" name="race"> -->
-                <select>
-                <option> Hispanic or Latino </option>
-                <option> White (Not Hispanic or Latino) </option>
-                <option> Black or African (Not Hispanic or Latino) </option>
-                <option> Native Hawaiian or Paccfifc Islander (Not Hispanic or Latino)</option>
-                <option> Asian</option>
-                <option> American Indian or Alaska Native </option>
-                <option> Decline to self-identify</option>
-                </select> <br><br>  
+            <label>Race/Ethnicity:</label>
+            <select name="race">
+                <option> Select... </option>
+                <option value="Hispanic or Latino"> Hispanic or Latino </option>
+                <option value="White (Not Hispanic or Latino)"> White (Not Hispanic or Latino) </option>
+                <option value="Black or African"> Black or African (Not Hispanic or Latino) </option>
+                <option value="Native Hawaiian or Paccfifc Islander"> Native Hawaiian or Paccfifc Islander (Not Hispanic or Latino)</option>
+                <option value="Asian"> Asian</option>
+                <option value="American Indian or Alaska Native"> American Indian or Alaska Native </option>
+                <option value="Decline to self-identify"> Decline to self-identify</option>
+            </select> <br><br>  
+
             
             
             
            
-
-            <!-- <h2>Education: </h2> -->
-            <label for="Education">Highest Level of Education:</label>
-            <input type="text" placeholder="" name="Education"><br><br>
-            <!-- <h3> College/University: </h3>
-            <input type="text" placeholder="" name="College"> -->
-                
+            <label >Highest Level of Education:</label>
+            <input type="text" placeholder="" name="hloe"><br><br>
+            
+            
+            
+            
+            <label>University/College:</label>   
+            <input type="text" placeholder="" name="school"> <br><br>
           
 
-            <!-- <h3> Highest Level Of Education: </h3>
-            <input type="text" placeholder="" name="Education"> -->
-                
+            <p><label>Briefly describe yourself and why you want to be apart of Uber Professor:</label></p>
+            <textarea name="description" rows="4" cols="50"></textarea>
             
-
-            <h3> Brief description about yourself</h3>
-            <input type="text" placeholder="" name="description">
-
-            <!-- <textarea></textarea> -->
+            
         
         <input type="submit">    
     </form>        

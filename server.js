@@ -52,14 +52,16 @@ app.get('/Sign-Up',async (request, response)=>{
 // POST
 app.post('/addInfo', async (request, response)=>{
     db.collection('CreateProfile').insertOne({
-        firstName:request.body.FName, 
-        Lastname:request.body.LName,
+        firstName:request.body.fname, 
+        Lastname:request.body.lname,
         Age: request.body.age,
-        College_University: request.body.College,
-        Education:request.body.Education,
+        Email: request.body.email,
+        Univeristy_College: request.body.school,
+        Education:request.body.hloe,
         Race_Ethnicity: request.body.race,
         briefDescription: request.body.description,
-        State: request.body.State })
+        State: request.body.states,
+        Resume: request.body.resume})
     .then(result => {
         console.log('Added all the info')
         response.redirect('/createProfile')    

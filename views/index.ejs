@@ -16,7 +16,7 @@
         
         <ul>
             
-            <li> <a href="/"> Home</li></h3>
+            <li> <a href="/"> Home</li>
             <li> <a href="Login-in"> Login-in</li>
             <li> <a href="Sign-Up"> Sign Up </li>
             <li> <a href="Create"> Create Profile </a> </li>
@@ -24,95 +24,52 @@
         </ul>
             
     </div>
+    <!-- Header -->
     
 
     
-    <h1 class="Title"> Welcome to Uber Professor</h1>
-    <h2 class="Title"> Welcome to Uber Professor ! Fast and easy way to find a substitue Educator when your main Teacher/Professor is absent! </h2>
+    <h1 id="Title"> Welcome to Uber Professor</h1>
+    <h2> Find your local Professor </h2>
+    <h2> who is in your area</h2>
+
+    
+    <section>
+        <form action="/EducatorSeacrh" method="POST">
+            
+            
+                
+                <input type="text" id="first" name=""placeholder="Professor...">
+                <input type="text" id="second" placeholder="City, state, or zip code">
+                <input type="date" id="third" placeholder="Tomorrow">
+                <input type="text" id="fourth" placeholder="Choose your subject"> 
+                <!-- <button type="submit"><i class="fas fa-search"></i></button>  -->
+                
+                    
+            <!-- <input type="submit">     -->
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="column#1">
+        <ul id="footer">
+            
+            <li> <a href="/"> Home</li>
+            <li> <a href="Login-in"> Login-in</li>
+            <li> <a href="Sign-Up"> Sign Up </li>
+            <li> <a href="Create"> Create Profile </a> </li>
+            
+        </ul>
+    </footer>
+
     
     
-    <form action="/EducatorSeacrh" method="POST">
-        
-            <h2> Search for your favorite Educator!</h2>
-            <input type="text" placeholder="" name="/Search">
-                
-
-            <h2> State:</h2>
-            <!-- <input type="text" name="State"> -->
-                
-                
-            <label for="state"> State: </label>
-            <select>
-            <option value="">Alabama</option>
-            <option value="">Alaska</option>
-            <option value="">Arizona</option>
-            <option value="">Arkansas</option>
-            <option value="">California</option>
-            <option value="">Colorado</option>
-            <option value="">Connecticut</option>
-            <option value="">Delaware</option>
-            <option value="">Florida</option>
-            <option value="">Georgia</option>
-            <option value="">Hawaii</option>
-            <option value="">Idaho</option>
-            <option value="">Illinois</option>
-            <option value="">Indiana</option>
-            <option value="">Iowa</option>
-            <option value="">Kansas</option>
-            <option value="">Kentucky</option>
-            <option value="">Louisiana</option>
-            <option value="">Maine</option>
-            <option value="">Maryland</option>
-            <option value="">Massachusetts</option>
-            <option value="">Michigan</option>
-            <option value="">Minnesota</option>
-            <option value="">Mississippi</option>
-            <option value="">Missouri</option>
-            <option value="">Alabama</option>
-            <option value="">Alabama</option>
-            <option value="">Alabama</option>
-            <option value="">Alabama</option>
-            <option>Montana</option>
-            <option>Nebraska</option>	
-            <option>Nevada</option>	
-            <option>New Hampshire</option>	
-            <option>New Jersey</option>
-            <option>New Mexico</option>	
-            <option>New York</option>	
-            <option>North Carolina</option>	
-            <option>North Dakota</option>	
-            <option>Ohio</option>
-            <option>Oklahoma</option>	
-            <option>Oregon</option>	
-            <option>Pennsylvania</option>	
-            <option>Rhode Island</option>
-            <option>South Carolina</option>	
-            <option>South Dakota</option>	
-            <option>Tennessee</option>	
-            <option>Texas</option>
-            <option>Utah</option>	
-            <option>Vermont</option>	
-            <option>Virginia</option>	
-            <option>Washington</option>	
-            <option>West Virginia</option>	
-            <option>Wisconsin</option>	
-            <option>Wyoming</option>
-            </select>
-                
-
-            <h2> Subject:</h2>
-            <input type="text" name="subject">
-            <select>
-            <option> Math</option>
-            <option> English</option>
-            <option> Science</option>
-            <option> History</option>
-            </select>
-
-                
-        <input type="submit">    
-    </form>
-
+    
     
     <script src="public/main.js"></script>
 </body>

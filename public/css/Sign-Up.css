@@ -33,7 +33,29 @@
 /* ADDITIONAL STYLES
  /*******************************************/
 
- body{
+/* Header */
+:root{
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-white: #141d28;
+    --color-black-1: #212b38;
+}
+
+.logo{
+    color: var(--color-white);
+    font-size:30px;
+}
+
+.logo span{
+    color: var(--color-primary);
+}
+
+/* Header */
+
+
+/* Section */
+
+body{
     margin: 0;
     padding: 0;
     
@@ -46,9 +68,10 @@
     padding: 20px;
     margin: 8% aut0 0;
     text-align: center;
+   
 }
 .sign-up-form{
-    color: #1c8abd;
+    color: #0073ff;
     margin-bottom: 30px;
 }
 .input-box{
@@ -81,3 +104,12 @@ hr{
     margin-top: 20px;
     width: 80%;
 }
+
+section{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+/* Section */
+
