@@ -40,6 +40,10 @@ app.get('/CreateProfile', async (request, response)=> {
     response.render('createProfile.ejs')
 })
 
+app.get('/Login', async (request, response)=>{
+    response.render('Login.ejs')
+})
+
 
 app.get('/Sign-Up',async (request, response)=>{
     response.render('Sign-Up.ejs')
@@ -50,7 +54,8 @@ app.get('/Sign-Up',async (request, response)=>{
 
 
 // POST
-app.post('/addInfo', async (request, response)=>{
+// Create Professor Account//
+app.post('/CreateAccount', async (request, response)=>{
     db.collection('CreateProfile').insertOne({
         firstName:request.body.fname, 
         Lastname:request.body.lname,
@@ -63,12 +68,55 @@ app.post('/addInfo', async (request, response)=>{
         State: request.body.states,
         Resume: request.body.resume})
     .then(result => {
-        console.log('Added all the info')
+        console.log('Account Created')
         response.redirect('/createProfile')    
     })
     .catch(error => console.log(error))
 })
+//Create Professor Account (createprofile.ejs)//
 
+//Searching for Professor (index.ejs)//
+app.post('/EducatorSearch', async (request, response)=>{
+    db.collection('EducatorSearch').insertOne({
+       Professor: request.body.professor,
+       City: request.body.city,
+       Date: request.body.date,
+       Subject: request.body.subject})
+    .then(result =>{
+        console.log('Searching for Educator')
+        response.redirect('/home')
+        // make a page for the educator search //
+    })
+    .catch(error => console.log(error))
+})
+//Searching for Professor (index.ejs)//
+
+// Login (login.ejs) //
+app.post('/Login', async (request, response) =>{
+    db.collection('loginInfo').insertOne({
+        Email: request.body.email,
+        Password: request.body.password 
+    })
+    .then(result =>{
+        console.log('Login info added')
+        response.redirect('/')
+    }).catch(error => console.log(error))
+})
+
+// Sign-up Info //
+
+app.post('/Signup', async (request, response) =>{
+    db.collection('loginInfo').insertOne({
+        Email: request.body.email,
+        Password: request.body.password 
+    })
+    .then(result =>{
+        console.log('Signup info added')
+        response.redirect('/')
+    }).catch(error => console.log(error))
+})
+
+// Sign-up Info //
 
 
 

@@ -33,14 +33,13 @@
 /* ADDITIONAL STYLES
  /*******************************************/
 
-/* Header */
 li{
     display: flex;
     justify-content: flex-end;
     padding-right:150px ;
 }
 
-
+ /* Header */
 :root{
     --color-primary: #0073ff;
     --color-white: #e9e9e9;

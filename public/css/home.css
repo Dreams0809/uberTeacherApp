@@ -65,7 +65,7 @@ div{
 .menu_bar ul{
     list-style:none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
@@ -88,6 +88,9 @@ div{
     color: var(--color-primary);
 
 }
+
+
+/* Header */
 
 /* Body */
 
@@ -119,25 +122,52 @@ button {
 section{
     --color-primary: #0073ff;
 }
+
+
 /* Body */
 
 
 /* Footer */
-
-footer{
-    padding-top: 500px;
-    
-}
-
+ 
 #footer{
+    padding-top: 500px;
+} 
+
+#footer .column1 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color:#0073ff;
+    color: rgb(255, 255, 255); 
+    display: flex; 
+    --webkit-box-pack: justify;
+    flex-direction: row;
+    align-content: center;
+    padding-top: 110px;
+    padding-bottom: 120px;
+    font-size: 25px;
+}   
+
+
+/* #footer{
     list-style: none;
     text-decoration: none;
     display: flex;
-    align-content: space-around;
-    flex-direction: column
-    
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+
+.column1{
+    background-color:#0073ff;
+    color: rgb(255, 255, 255); 
+    display: flex; 
+    --webkit-box-pack: justify;
+    flex-direction: row;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+} */
+
 /* Footer */
-
-
