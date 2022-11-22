@@ -73,7 +73,7 @@ app.post('/CreateAccount', async (request, response)=>{
     })
     .catch(error => console.log(error))
 })
-//Create Professor Account (createprofile.ejs)//
+
 
 //Searching for Professor (index.ejs)//
 app.post('/EducatorSearch', async (request, response)=>{
@@ -84,12 +84,12 @@ app.post('/EducatorSearch', async (request, response)=>{
        Subject: request.body.subject})
     .then(result =>{
         console.log('Searching for Educator')
-        response.redirect('/home')
+        response.redirect('/')
         // make a page for the educator search //
     })
     .catch(error => console.log(error))
 })
-//Searching for Professor (index.ejs)//
+
 
 // Login (login.ejs) //
 app.post('/Login', async (request, response) =>{
@@ -116,7 +116,7 @@ app.post('/Signup', async (request, response) =>{
     }).catch(error => console.log(error))
 })
 
-// Sign-up Info //
+
 
 
 
