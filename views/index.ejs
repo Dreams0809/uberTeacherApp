@@ -53,6 +53,19 @@
 
 
 
+    <section>
+        <input type="text" name="subject" id="subject" placeholder="Choose subject">
+        <button id="search"> Search</button>
+    </section>
+
+    <ul>
+        <% for(let i=0; i < educators?.length; i++) {%> 
+            <li>
+                <span><%= educators[i]?.firstName %></span>    
+            </li>
+        <% } %>
+    </ul>
+
 
 
     <!-- Footer -->

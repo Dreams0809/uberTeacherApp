@@ -49,27 +49,36 @@ app.get('/Sign-Up',async (request, response)=>{
     response.render('Sign-Up.ejs')
 })
 
+// app.get('/subject/:subject', async (request, response)=>{
+//     const subjectFromClient = request.params.subject
+//     console.log('go')
+//     const educator = await db.collection('CreateAccount').find({subject: subjectFromClient}).toArray()
+//     response.render('index.ejs', { educator: educator })
+// })
 
-
+ app.get('/',async (request, response)=>{
+    response.render('index.ejs', {educators: []})
+})
 
 
 // POST
 // Create Professor Account//
-app.post('/CreateAccount', async (request, response)=>{
-    db.collection('CreateProfile').insertOne({
+app.post('/addInfo', async (request, response)=>{
+    db.collection('CreateAccount').insertOne({
         firstName:request.body.fname, 
-        Lastname:request.body.lname,
-        Age: request.body.age,
-        Email: request.body.email,
-        Univeristy_College: request.body.school,
-        Education:request.body.hloe,
-        Race_Ethnicity: request.body.race,
+        lastName:request.body.lname,
+        subject: request.body.subject,
+        age: request.body.age,
+        email: request.body.email,
+        univeristyCollege: request.body.school,
+        education:request.body.hloe,
+        raceEthnicity: request.body.race,
         briefDescription: request.body.description,
-        State: request.body.states,
-        Resume: request.body.resume})
+        state: request.body.states,
+        resume: request.body.resume})
     .then(result => {
         console.log('Account Created')
-        response.redirect('/createProfile')    
+        response.redirect('/')    
     })
     .catch(error => console.log(error))
 })
@@ -115,6 +124,7 @@ app.post('/Signup', async (request, response) =>{
         response.redirect('/')
     }).catch(error => console.log(error))
 })
+
 
 
 
