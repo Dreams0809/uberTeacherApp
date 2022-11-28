@@ -1,4 +1,4 @@
-﻿const { response } = require("express")
+﻿
 
 document.querySelector('#search').addEventListener('click',getEducator)
 const searchField = document.querySelector('#subject')

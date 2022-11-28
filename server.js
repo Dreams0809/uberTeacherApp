@@ -1,4 +1,4 @@
-﻿const { request, response } = require('express');
+﻿
 const express = require('express')
 const app = express()
 const mongodb = require('mongodb');
@@ -26,11 +26,8 @@ app.use('/public', express.static('public'));
 
 // GET
 app.get('/',async (request, response)=>{
-    response.render('index.ejs')
+    response.render('index.ejs',  {educators: []})
 })
-// app.get('/Home',async (request, response)=>{
-//     response.render('index.ejs')
-// })
 
 app.get('/Create',async (request, response)=>{
     response.render('createProfile.ejs')
@@ -49,16 +46,13 @@ app.get('/Sign-Up',async (request, response)=>{
     response.render('Sign-Up.ejs')
 })
 
-// app.get('/subject/:subject', async (request, response)=>{
-//     const subjectFromClient = request.params.subject
-//     console.log('go')
-//     const educator = await db.collection('CreateAccount').find({subject: subjectFromClient}).toArray()
-//     response.render('index.ejs', { educator: educator })
-// })
-
- app.get('/',async (request, response)=>{
-    response.render('index.ejs', {educators: []})
+app.get('/subject/:subject', async (request, response)=>{
+    const subjectFromClient = request.params.subject
+    const educators = await db.collection('CreateAccount').find({subject: subjectFromClient}).toArray()
+    response.render('index.ejs', { educators: educators })
 })
+
+
 
 
 // POST
