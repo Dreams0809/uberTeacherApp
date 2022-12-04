@@ -1,5 +1,4 @@
-﻿
-const express = require('express')
+﻿const express = require('express')
 const app = express()
 const mongodb = require('mongodb');
 const MongoClient = require('mongodb').MongoClient
@@ -46,10 +45,12 @@ app.get('/Sign-Up',async (request, response)=>{
     response.render('Sign-Up.ejs')
 })
 
-app.get('/subject/:subject', async (request, response)=>{
-    const subjectFromClient = request.params.subject
-    const educators = await db.collection('CreateAccount').find({subject: subjectFromClient}).toArray()
-    response.render('index.ejs', { educators: educators })
+app.post('/searchBySubject', async (request, response)=>{
+    console.log(request.body.subject)
+    const subjectFromClient = request.body.subject.toLowerCase()
+    const subject = await db.collection('CreateAccount').find({subject: subjectFromClient}).toArray()
+    console.log(subject)
+    response.render('index.ejs', { educators: subject })
 })
 
 
